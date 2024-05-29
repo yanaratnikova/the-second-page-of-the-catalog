@@ -257,4 +257,50 @@ summary {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 49px;
+  margin-bottom: 96px;
+  width: 284px;
+  height: 43px;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+.pagination_content {
+  display: flex;
+  justify-content: space-around;
+  gap: 18px;
+}
+
+.pagination_content a {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(196, 196, 196);
+}
+
+.pagination_content a:hover {
+  color: rgb(241, 109, 127);
+}
+
+.Vector path:hover {
+  fill: rgb(241, 109, 127);
+}
+
+.ellipsis {
+  display: flex;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(196, 196, 196);
 }/*# sourceMappingURL=style.css.map */
