@@ -207,18 +207,35 @@ position: relative;
       line-height: 29px;
     }
 }
-
-.breadcrumbs__link {
-color: rgb(99, 99, 99);
-  font-size: 14px;
+.breadcrumbs {
+  &__ul {
+    list-style-type: none;
+    display: flex;
+  
+  }
+  &__li:not(:last-child)::after {
+    content: '/';
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgb(99, 99, 99);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17px;
+  }
+&__link {
+    color: rgb(99, 99, 99);
+    font-size: 14px;
     font-weight: 300;
     line-height: 17px;
 
+  }
+
+&__li:last-child .breadcrumbs__link {
+      font-weight: 700;
+        color: $colorSelectSite;
 }
-.breadcrumbs__link_site {
-  font-weight: 700;
-  color: $colorSelectSite;
 }
+
 .product {
   width: $thirdSite;
   display: flex;
@@ -360,18 +377,22 @@ color: rgb(99, 99, 99);
   display: flex;
   justify-content: center;
   background-color: #F8F8F8
+  
 }
 
 .surfer {
   width: 100vw;
-  height: 20vw;
+  height: 30vw;
   object-fit: cover;
   object-position: bottom;
+ 
 }
 
 .basement-ton {
   position: relative;
   display: inline-block;
+overflow-x: hidden;
+font-size: 0;
 }
 
 .basement-ton::before {
@@ -379,8 +400,8 @@ color: rgb(99, 99, 99);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 30vw;
   background: rgba(244, 244, 244, 0.70);
 }
 
@@ -393,7 +414,7 @@ color: rgb(99, 99, 99);
 }
 
 .basementCard1 {
-  padding: 97px;
+  padding: 90px;
   max-width: 360px;
   display: flex;
   flex-direction: column;
@@ -411,7 +432,8 @@ color: rgb(99, 99, 99);
 }
 
 .basementCard2 {
-  padding: 150px 38px 140px 38px;
+  padding-top: 150px;
+  padding-bottom: 50px;
   max-width: 557px;
   display: flex;
   flex-direction: column;
@@ -423,6 +445,7 @@ color: rgb(99, 99, 99);
   position: relative;
   right: 20px;
   padding-left: 20px;
+ 
 }
 
 
@@ -493,18 +516,148 @@ button:hover {
 
 }
 .emailBox {
-  position: relative;
-  right: 250px;
-  padding-left: 20px;
+  position: absolute;
+
+
 }
 
 
 .basementButton {
   position: relative;
-  right: 255px;
+ left: 50px;
   z-index: 1;
 
 }
-.emailFofrm {
+.emailForm {
   position: absolute;
+}
+.socialMedia {
+  padding: 24px;
+  background: rgb(34, 34, 34);
+
+}
+
+.socialMediaContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialMediaContent h4 {
+  color: #FBFBFB;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.socialMediaContentButton {
+  padding: 10px 10px 10px 10px;
+
+}
+
+svg:hover {
+  fill: #E1E1E1;
+}
+.mainMenuCard h1 {
+  color: #000;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.mainMenuCard h2 {
+  text-align: left;
+  color: #F16D7F;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mainMenuCard a {
+  color: #6F6E6E;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mainMenuModul {
+  padding: 20px 30px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dropdown-content {
+  margin: 0;
+  background-color: #FFF;
+  padding: 32px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+
+}
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #F16D7F;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.mainMenuCard h1 {
+  color: #000;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.mainMenuCard h2 {
+  text-align: left;
+  color: #F16D7F;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mainMenuCard a {
+  color: #6F6E6E;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mainMenuModul {
+  padding: 20px 30px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.line {
+  display: flex;
+  flex-direction: column;
 }
